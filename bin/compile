@@ -179,7 +179,7 @@ if [ \$1 = "--version" ]; then
 elif [ \$1 = "--product-version" ]; then
   exec \$HOME/.apt/opt/google/$BIN --product-version
 else
-  exec \$HOME/.apt/opt/google/$BIN --no-sandbox --disable-gpu --remote-debugging-port=9222 \$@
+  exec \$HOME/.apt/opt/google/$BIN --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" --no-sandbox --disable-gpu --remote-debugging-port=9222 \$@
 fi
 EOF
 chmod +x $BIN_DIR/$SHIM
